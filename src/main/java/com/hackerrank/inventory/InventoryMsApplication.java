@@ -1,13 +1,13 @@
-package com.hackerrank.sku;
+package com.hackerrank.inventory;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SkuMsApplication {
+public class InventoryMsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SkuMsApplication.class, args);
+		SpringApplication.run(InventoryMsApplication.class, args);
 	}
 
 }

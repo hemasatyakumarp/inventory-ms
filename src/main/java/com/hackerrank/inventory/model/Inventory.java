@@ -1,4 +1,4 @@
-package com.hackerrank.sku.model;
+package com.hackerrank.inventory.model;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Sku implements Serializable{
+public class Inventory implements Serializable{
 	
 	/**
 	 * 

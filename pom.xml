@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.hackerrank</groupId>
-	<artifactId>sku</artifactId>
+	<artifactId>inventory</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<name>sku-ms</name>
 	<description>sku microservice</description>

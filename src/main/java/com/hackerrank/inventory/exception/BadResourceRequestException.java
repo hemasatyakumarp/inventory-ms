@@ -1,4 +1,4 @@
-package com.hackerrank.sku.exception;
+package com.hackerrank.inventory.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
