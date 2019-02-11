@@ -41,10 +41,10 @@ public class CsvFileToDatabase {
     @Bean
     public FlatFileItemReader<Inventory> csvAnimeReader(){
         FlatFileItemReader<Inventory> reader = new FlatFileItemReader<Inventory>();
-        reader.setResource(new ClassPathResource("animescsv.csv"));
+        reader.setResource(new ClassPathResource("inventory.csv"));
         reader.setLineMapper(new DefaultLineMapper<Inventory>() {{
             setLineTokenizer(new DelimitedLineTokenizer() {{
-                setNames(new String[] { "id", "title", "description" });
+                setNames(new String[] { "id", "productName", "productLable","inventoryOnHand","minQtyReq","price" });
             }});
             setFieldSetMapper(new BeanWrapperFieldSetMapper<Inventory>() {{
                 setTargetType(Inventory.class);
