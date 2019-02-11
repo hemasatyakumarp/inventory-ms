@@ -12,54 +12,54 @@ import com.hackerrank.inventory.repository.InventoryRepository;
 @Service("InventoryService")
 public class InventoryServiceImpl implements InventoryService {
     @Autowired
-    private InventoryRepository InventoryRepository;
+    private InventoryRepository inventoryRepository;
 
-    @Override
-    public void deleteAllInventorys() {
-        InventoryRepository.deleteAllInBatch();
+    
+    public void deleteAllInventories() {
+    	inventoryRepository.deleteAllInBatch();
     }
 
-    @Override
+   
     public Boolean deleteInventoryById(Long id) {
-    	 Inventory Inventory = InventoryRepository.findOne(id);
+    	 Inventory Inventory = inventoryRepository.findOne(id);
 
          if (Inventory == null) {
              throw null;
          }
          
-        InventoryRepository.deleteById(id);
+         inventoryRepository.deleteById(id);
         return true;
     }
 
     @Override
     public Inventory createInventory(Inventory sku) {
-        Inventory existingInventory = InventoryRepository.findOne(sku.getId());
+        Inventory existingInventory = inventoryRepository.findOne(sku.getId());
 
         if (existingInventory != null) {
             throw new BadResourceRequestException("Inventory with same id exists.");
         }
 
-        InventoryRepository.save(sku);
+        inventoryRepository.save(sku);
         return existingInventory;
     }
     
     @Override
     public Inventory updateInventory(Long skuId,Inventory sku) {
         
-        Inventory tempInventory = InventoryRepository.findOne(skuId);
+        Inventory tempInventory = inventoryRepository.findOne(skuId);
 
         if (tempInventory == null) {
             return null;
         }
        
-        InventoryRepository.save(sku);
-        return InventoryRepository.findOne(skuId);
+        inventoryRepository.save(sku);
+        return inventoryRepository.findOne(skuId);
         
     }
 
     @Override
     public Inventory getInventoryById(Long id) {
-        Inventory Inventory = InventoryRepository.findOne(id);
+        Inventory Inventory = inventoryRepository.findOne(id);
 
         if (Inventory == null) {
             throw new NoSuchResourceFoundException("No Inventory with given id found.");
@@ -70,6 +70,7 @@ public class InventoryServiceImpl implements InventoryService {
 
     @Override
     public List<Inventory> getAllInventorys() {
-        return InventoryRepository.findAll();
+    	
+        return inventoryRepository.findAll();
     }
 }

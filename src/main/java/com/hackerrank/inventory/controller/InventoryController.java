@@ -22,9 +22,7 @@ public class InventoryController {
 	@RequestMapping(value = "/inventory", method = RequestMethod.GET)
 	public ResponseEntity<List<Inventory>> getAllInventorys() {
 		List<Inventory> list = service.getAllInventorys();
-		if (list == null) {
-			return new ResponseEntity(HttpStatus.NOT_FOUND);
-		}
+		
 		return new ResponseEntity(list, HttpStatus.OK);
 
 	}
@@ -67,9 +65,9 @@ public class InventoryController {
 	}
 
 	@RequestMapping(value = "/inventory", method = RequestMethod.DELETE)
-	public ResponseEntity<String> deleteAllInventory() {
-		service.deleteAllInventorys();
-		return new ResponseEntity("Inventorys Deleted", HttpStatus.OK);
+	public ResponseEntity<String> deleteAllInventories() {
+		service.deleteAllInventories();
+		return new ResponseEntity("Inventories Deleted", HttpStatus.OK);
 	}
 
 }

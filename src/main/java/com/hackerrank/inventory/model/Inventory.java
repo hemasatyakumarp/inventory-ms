@@ -21,6 +21,18 @@ public class Inventory implements Serializable{
 	private int minQtyReq;
 	private double price;
 	
+	public Inventory(Long id, String productName, String productLable, int inventoryOnHand, int minQtyReq,
+			double price) {
+		super();
+		this.id = id;
+		this.productName = productName;
+		this.productLable = productLable;
+		this.inventoryOnHand = inventoryOnHand;
+		this.minQtyReq = minQtyReq;
+		this.price = price;
+	}
+	
+	
 	public Long getId() {
 		return id;
 	}

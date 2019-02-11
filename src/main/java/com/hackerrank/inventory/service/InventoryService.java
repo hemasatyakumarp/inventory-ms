@@ -5,7 +5,7 @@ import java.util.List;
 import com.hackerrank.inventory.model.Inventory;
 
 public interface InventoryService {
-    void deleteAllInventorys();
+    void deleteAllInventories();
     Boolean deleteInventoryById(Long id);
     Inventory createInventory(Inventory sku);
     Inventory getInventoryById(Long id);
