@@ -43,7 +43,7 @@ public class InventoryController {
 		return new ResponseEntity(service.createInventory(inventory), HttpStatus.CREATED);
 	}
 
-	@RequestMapping(value = "/inventory/{id}", method = RequestMethod.PUT)
+	@RequestMapping(value = "/inventory/{id}", method = {RequestMethod.PUT,RequestMethod.PATCH})
 	public ResponseEntity<Inventory> updateInventory(@PathVariable("id") Long inventoryId,@RequestBody Inventory inventory) {
 
 		Inventory c = service.updateInventory(inventoryId,inventory);

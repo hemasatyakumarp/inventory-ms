@@ -1,4 +1,4 @@
-package com.hackerrank.inventory.service;
+package com.hackerrank.inventory.batch;
 
 import javax.sql.DataSource;
 
@@ -60,7 +60,7 @@ public class CsvFileToDatabase {
 	public JdbcBatchItemWriter<Inventory> csvAnimeWriter() {
 		 JdbcBatchItemWriter<Inventory> csvAnimeWriter = new JdbcBatchItemWriter<Inventory>();
 		 csvAnimeWriter.setItemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<Inventory>());
-		 csvAnimeWriter.setSql("INSERT INTO Inventory (id, productName, productLable,inventoryOnHand,minQtyReq,price) VALUES (:id, :productName, :productLable,:inventoryOnHand,:minQtyReq,:price)");
+		 csvAnimeWriter.setSql("INSERT INTO Inventory (id, product_Name, product_Lable,inventory_On_Hand,min_Qty_Req,price) VALUES (:id, :productName, :productLable,:inventoryOnHand,:minQtyReq,:price)");
 		 csvAnimeWriter.setDataSource(dataSource);
 	        return csvAnimeWriter;
 	}

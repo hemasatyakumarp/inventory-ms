@@ -1,19 +1,17 @@
 package com.hackerrank.inventory.model;
 
-import java.io.Serializable;
+
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Inventory implements Serializable{
+public class Inventory{
 	
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	
 	@Id
-	@GeneratedValue
 	private Long id;
 	private String productName;
 	private String productLable;
@@ -33,6 +31,12 @@ public class Inventory implements Serializable{
 	}
 	
 	
+	public Inventory() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public Long getId() {
 		return id;
 	}

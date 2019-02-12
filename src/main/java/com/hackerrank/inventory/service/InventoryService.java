@@ -11,4 +11,5 @@ public interface InventoryService {
     Inventory getInventoryById(Long id);
     List<Inventory> getAllInventorys();
 	Inventory updateInventory(Long id,Inventory sku);
+	List<Inventory> findInadequateInventory();
 }

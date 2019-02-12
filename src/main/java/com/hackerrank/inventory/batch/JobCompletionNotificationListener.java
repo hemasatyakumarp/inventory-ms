@@ -1,4 +1,4 @@
-package com.hackerrank.inventory.service;
+package com.hackerrank.inventory.batch;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -33,18 +33,8 @@ public class JobCompletionNotificationListener extends JobExecutionListenerSuppo
 	public void afterJob(JobExecution jobExecution) {
 		if(jobExecution.getStatus() == BatchStatus.COMPLETED) {
 			log.info("============ JOB FINISHED ============ Verifying the results....\n");
-
-			List<Inventory> results = jdbcTemplate.query("SELECT * FROM Inventory", new RowMapper<Inventory>() {
-				@Override
-				public Inventory mapRow(ResultSet rs, int row) throws SQLException {
-					return new Inventory(rs.getLong(1), rs.getString(2), rs.getString(3),rs.getInt(4),rs.getInt(5), rs.getDouble(6));
-				}
-			});
-
-			for (Inventory Inventory : results) {
-				log.info("Discovered <" + Inventory + "> in the database.");
-			}
-
+			
+					
 		}
 	}
 	

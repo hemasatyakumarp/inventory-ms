@@ -73,4 +73,9 @@ public class InventoryServiceImpl implements InventoryService {
     	
         return inventoryRepository.findAll();
     }
+    
+    @Override
+    public List<Inventory> findInadequateInventory() {    	
+        return inventoryRepository.findInadequateInventory();
+    }
 }
