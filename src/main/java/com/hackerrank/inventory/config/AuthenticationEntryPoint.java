@@ -1,4 +1,4 @@
-package com.hackerank.inventory.config;
+package com.hackerrank.inventory.config;
 
 import java.io.IOException;
 import java.io.PrintWriter;

@@ -1,4 +1,4 @@
-package com.hackerrank.customer.rabbitmq;
+package com.hackerrank.inventory.rabbitmq;
 
 
 import org.springframework.amqp.core.Queue;

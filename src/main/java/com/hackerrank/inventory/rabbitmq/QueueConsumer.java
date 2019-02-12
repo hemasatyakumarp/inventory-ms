@@ -1,4 +1,4 @@
-package com.hackerrank.customer.rabbitmq;
+package com.hackerrank.inventory.rabbitmq;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
